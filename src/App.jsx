@@ -74,7 +74,7 @@ function App() {
 
   return (
     <div className="flex flex-row">
-      <Sidebar onEditProject={handleEditProject} projects={projects} onCreateNewProject={handleCreateNewProject}></Sidebar>
+      <Sidebar onEditProject={handleEditProject} projects={projects} onCreateNewProject={handleCreateNewProject} selectedProjectId={projectIdxInEdition}></Sidebar>
       <main className="h-screen pl-10 w-4/5">
         {(!projectInEdition && !isCreatingProject) ?
           <DefaultView onNewProject={handleCreateNewProject} /> :
